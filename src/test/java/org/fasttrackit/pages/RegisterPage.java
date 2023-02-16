@@ -1,6 +1,11 @@
 package org.fasttrackit.pages;
 
-public class LoginPage extends BasePage{
+public class RegisterPage extends BasePage{
+
+
+
+
+
 
 
 

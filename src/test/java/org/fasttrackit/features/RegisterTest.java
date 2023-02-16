@@ -1,8 +1,6 @@
 package org.fasttrackit.features;
 
-public class LoginTest extends BaseTest{
-
-
+public class RegisterTest extends BaseTest{
 
 
 

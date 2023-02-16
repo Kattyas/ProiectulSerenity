@@ -1,6 +1,9 @@
 package org.fasttrackit.steps;
 
-public class LoginSteps extends BaseSteps{
+public class CheckoutSteps extends BaseSteps{
+
+
+
 
 
 
