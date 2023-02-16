@@ -3,6 +3,7 @@ package org.fasttrackit.features;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import org.fasttrackit.steps.RegisterSteps;
 import org.fasttrackit.steps.SearchSteps;
 import org.fasttrackit.utils.Constants;
 import org.junit.Before;
@@ -17,6 +18,9 @@ public class BaseTest {
 
     @Steps
     protected SearchSteps searchSteps;
+
+    @Steps
+    protected RegisterSteps registerSteps;
 
 
 

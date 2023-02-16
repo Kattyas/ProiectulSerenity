@@ -21,7 +21,7 @@ public class SearchResultsPage extends BasePage{
 
         for (WebElementFacade element : listOfProductNames){
             if (element.getText().equalsIgnoreCase(productName)){
-                //element.click();
+                element.click();
                 return true;
             }
         }

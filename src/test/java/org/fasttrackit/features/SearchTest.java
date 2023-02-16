@@ -9,9 +9,6 @@ public class SearchTest extends BaseTest {
         searchSteps.searchForKeyword("NEW");
         searchSteps.clickSearchIcon();
         searchSteps.verifyProductIsInList("NEW HAT");
-
-
-
     }
 
 

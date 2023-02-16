@@ -12,17 +12,8 @@ public class HomePage extends BasePage{
     @FindBy(css = ".search-submit")
     private WebElementFacade searchButton;
 
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(id = "menu-item-122")
+    private WebElementFacade myAccountField;
 
 
 
@@ -39,6 +30,9 @@ public class HomePage extends BasePage{
 
     public void clickSearchButton(){
         clickOn(searchButton);
+    }
+    public void clickMyAccountField(){
+        clickOn(myAccountField);
     }
 
 
