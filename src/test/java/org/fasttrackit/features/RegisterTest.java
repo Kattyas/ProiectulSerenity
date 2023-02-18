@@ -11,7 +11,6 @@ public class RegisterTest extends BaseTest{
         registerSteps.typeUserEmail(Constants.USER_NAME);
         registerSteps.typePassword(Constants.USER_PASS);
         registerSteps.clickRegister();
-
     }
 
 

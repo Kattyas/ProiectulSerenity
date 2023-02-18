@@ -3,6 +3,8 @@ package org.fasttrackit.features;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import org.fasttrackit.steps.LoginSteps;
+import org.fasttrackit.steps.LogoutSteps;
 import org.fasttrackit.steps.RegisterSteps;
 import org.fasttrackit.steps.SearchSteps;
 import org.fasttrackit.utils.Constants;
@@ -15,12 +17,14 @@ public class BaseTest {
 
     @Managed(uniqueSession = true)
     public WebDriver driver;
-
     @Steps
     protected SearchSteps searchSteps;
-
     @Steps
     protected RegisterSteps registerSteps;
+    @Steps
+    protected LoginSteps loginSteps;
+    @Steps
+    protected LogoutSteps logoutSteps;
 
 
 

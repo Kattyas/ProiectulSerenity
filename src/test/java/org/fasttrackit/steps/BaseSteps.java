@@ -1,17 +1,17 @@
 package org.fasttrackit.steps;
 
 import net.thucydides.core.steps.ScenarioSteps;
-import org.fasttrackit.pages.AccountPage;
-import org.fasttrackit.pages.HomePage;
-import org.fasttrackit.pages.LoginPage;
-import org.fasttrackit.pages.SearchResultsPage;
+import org.fasttrackit.pages.*;
 
 public class BaseSteps extends ScenarioSteps {
 
     protected HomePage homePage;
     protected AccountPage accountPage;
-    protected LoginPage loginPage;
+    protected MyAccountPage myAccountPage;
     protected SearchResultsPage searchResultsPage;
+
+    protected AddressesPage addressesPage;
+
 
 
 
