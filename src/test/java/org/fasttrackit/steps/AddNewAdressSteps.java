@@ -25,11 +25,26 @@ public class AddNewAdressSteps extends BaseSteps{
         myAccountPage.clickAddresses();
     }
     @Step
-    public void clickBillingAddress(){
+    public void clickBillingAddressEdit(){
         addressesPage.clickBillingAddress();
     }
 
+    @Step
+    public void typeFirstName(String firstname){
+        billingAddressesPage.setFirstNameField(firstname);
+    }
+    
+    @Step
+    public void typeLastName(String lastname){
+        billingAddressesPage.setLastNameField(lastname);
+    }
+    
+    @Step
+    public void typeCountry(String country){
+        billingAddressesPage.setCountryField(country);
+    }
 
+// TODO: 19.02.2023 Street.... 
 
 
 

@@ -9,8 +9,9 @@ public class BaseSteps extends ScenarioSteps {
     protected AccountPage accountPage;
     protected MyAccountPage myAccountPage;
     protected SearchResultsPage searchResultsPage;
-
     protected AddressesPage addressesPage;
+
+    protected BillingAddressesPage billingAddressesPage;
 
 
 
