@@ -15,6 +15,9 @@ public class HomePage extends BasePage{
     @FindBy(id = "menu-item-122")
     private WebElementFacade myAccountField;
 
+    @FindBy(css = "#menu-item-123 a")
+    private WebElementFacade shopField;
+
 
 
 
@@ -34,7 +37,9 @@ public class HomePage extends BasePage{
     public void clickMyAccountField(){
         clickOn(myAccountField);
     }
-
+    public void clickShopField(){
+        clickOn(shopField);
+    }
 
 
 

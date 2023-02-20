@@ -12,11 +12,6 @@ public class LogoutTest extends BaseTest{
         logoutSteps.typePassword(Constants.USER_PASS);
         logoutSteps.clickLogin();
         logoutSteps.clickLogout();
-
-
-
-
-
     }
 
 

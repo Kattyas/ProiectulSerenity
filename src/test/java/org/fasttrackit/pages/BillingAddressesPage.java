@@ -11,9 +11,6 @@ public class BillingAddressesPage extends BasePage{
     @FindBy(css = ".form-row-last .input-text")
     private WebElementFacade lastNameField;
 
-    @FindBy(id = "select2-billing_country-container")
-    private WebElementFacade countryField;
-
     @FindBy(css = "p #billing_address_1")
     private WebElementFacade streetAddressField;
 
@@ -44,10 +41,6 @@ public class BillingAddressesPage extends BasePage{
         typeInto(lastNameField,value);
     }
 
-    public void setCountryField(String value){
-        typeInto(countryField,value);
-    }
-
     public void setStreetAddressField(String value){
         typeInto(streetAddressField,value);
     }
@@ -63,7 +56,6 @@ public class BillingAddressesPage extends BasePage{
     public void setPostcodeField(String value){
         typeInto(postcodeField,value);
     }
-
     public void setPhoneField(String value){
         typeInto(phoneField,value);
     }

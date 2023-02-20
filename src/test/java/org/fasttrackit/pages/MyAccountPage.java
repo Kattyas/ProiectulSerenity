@@ -9,7 +9,7 @@ public class MyAccountPage extends BasePage{
     @FindBy(css = ".woocommerce-MyAccount-navigation-link--customer-logout a")
     private WebElementFacade logoutButton;
 
-    @FindBy(css = ".is-active a")
+    @FindBy(css = ".woocommerce-MyAccount-navigation-link--edit-address a")
     private WebElementFacade addresses;
 
 
