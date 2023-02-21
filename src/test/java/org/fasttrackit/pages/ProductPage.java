@@ -8,9 +8,11 @@ public class ProductPage extends BasePage{
     @FindBy(css = ".cart button")
     private WebElementFacade addToCartButton;
 
-    @FindBy(css = "#primary > div.woocommerce-message")
+    @FindBy(id = "primary")
     private WebElementFacade addedToCartMessage;
 
+    @FindBy(id = "menu-item-124")
+    private WebElementFacade cartButton;
 
 
 
@@ -18,9 +20,11 @@ public class ProductPage extends BasePage{
     public void clickAddToCartButton(){
         clickOn(addToCartButton);
     }
-
-    public boolean hasBeenProductAddedToCart() {
-        return addedToCartMessage.getText().equalsIgnoreCase( "“Beanie” has been added to your art.");
+    public void hasBeenProductAddedToCart() {
+        addedToCartMessage.shouldContainText("“Beanie” has been added to your cart.");
+    }
+    public void clickToCart(){
+        clickOn(cartButton);
     }
 
 

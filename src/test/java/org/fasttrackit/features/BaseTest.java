@@ -26,6 +26,9 @@ public class BaseTest {
     protected AddNewAdressSteps addNewAdressSteps;
     @Steps
     protected CartSteps cartSteps;
+    @Steps
+    protected CheckoutSteps checkoutSteps;
+
 
 
 

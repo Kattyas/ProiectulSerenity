@@ -8,7 +8,6 @@ public class MyAccountPage extends BasePage{
 
     @FindBy(css = ".woocommerce-MyAccount-navigation-link--customer-logout a")
     private WebElementFacade logoutButton;
-
     @FindBy(css = ".woocommerce-MyAccount-navigation-link--edit-address a")
     private WebElementFacade addresses;
 
@@ -19,7 +18,6 @@ public class MyAccountPage extends BasePage{
     public void clickLogoutButton(){
         clickOn(logoutButton);
     }
-
     public void clickAddresses(){
         clickOn(addresses);
     }

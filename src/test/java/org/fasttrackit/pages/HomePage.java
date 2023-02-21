@@ -8,13 +8,10 @@ public class HomePage extends BasePage{
 
     @FindBy(css = "label .search-field")
     private WebElementFacade searchField;
-
     @FindBy(css = ".search-submit")
     private WebElementFacade searchButton;
-
     @FindBy(id = "menu-item-122")
     private WebElementFacade myAccountField;
-
     @FindBy(css = "#menu-item-123 a")
     private WebElementFacade shopField;
 
@@ -30,7 +27,6 @@ public class HomePage extends BasePage{
     public void setSearchField(String value) {
         typeInto(searchField, value);
     }
-
     public void clickSearchButton(){
         clickOn(searchButton);
     }
