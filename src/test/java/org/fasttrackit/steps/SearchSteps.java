@@ -18,6 +18,27 @@ public class SearchSteps extends BaseSteps{
         Assert.assertTrue(searchResultsPage.isProductInList(productName));
     }
 
+    @Step
+    public void goToSearchField(){
+        shopPage.clickOnSearchField();
+    }
+    @Step
+    public void typeOnSearchField(String value){
+        shopPage.setTypeIntoSearchField(value);
+    }
+    @Step
+    public void clickToSearch(){
+        shopPage.clickToSearch();
+    }
+    @Step
+    public void sortProductsByPrice(){
+        shopPage.selectPriceFromDropdown();
+    }
+    @Step
+    public void productsAreSortedByAscendingPrice(){
+        Assert.assertTrue("Not ascending price" ,shopPage.isPriceAscending());
+    }
+
 
 
 

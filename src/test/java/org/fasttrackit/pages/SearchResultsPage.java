@@ -1,7 +1,6 @@
 package org.fasttrackit.pages;
 
 import net.serenitybdd.core.pages.WebElementFacade;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
@@ -10,6 +9,7 @@ public class SearchResultsPage extends BasePage{
 
     @FindBy(css = ".container h1")
     private List<WebElementFacade> listOfProductNames;
+
 
 
 
@@ -26,8 +26,9 @@ public class SearchResultsPage extends BasePage{
             }
         }
         return false;
-
     }
+
+
 
 
 

@@ -10,6 +10,15 @@ public class SearchTest extends BaseTest {
         searchSteps.clickSearchIcon();
         searchSteps.verifyProductIsInList("NEW HAT");
     }
+    @Test
+    public void verifyAscendingPriceTest(){
+        cartSteps.navigateToShopPage();
+        searchSteps.goToSearchField();
+        searchSteps.typeOnSearchField("sh");
+        searchSteps.clickToSearch();
+        searchSteps.sortProductsByPrice();
+        searchSteps.productsAreSortedByAscendingPrice();
+    }
 
 
 
