@@ -10,10 +10,14 @@ public class MyAccountPage extends BasePage{
     private WebElementFacade logoutButton;
     @FindBy(css = ".woocommerce-MyAccount-navigation-link--edit-address a")
     private WebElementFacade addresses;
+    @FindBy(css = ".woocommerce-MyAccount-content")
+    private WebElementFacade helloText;
 
 
 
-
+    public void userIsLoggedIn(String username){
+        helloText.shouldContainText("Hello " + username);
+    }
 
     public void clickLogoutButton(){
         clickOn(logoutButton);

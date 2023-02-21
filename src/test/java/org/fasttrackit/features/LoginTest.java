@@ -11,6 +11,7 @@ public class LoginTest extends BaseTest{
         loginSteps.typeUsername(Constants.USER_NAME);
         loginSteps.typePassword(Constants.USER_PASS);
         loginSteps.clickLogin();
+        loginSteps.userIsLoggedIn("a");
     }
 
 

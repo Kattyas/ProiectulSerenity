@@ -21,6 +21,18 @@ public class CartSteps extends BaseSteps{
     public void verifyProductWasAddedToCart() {
         productPage.hasBeenProductAddedToCart();
     }
+    @Step
+    public void clickRemove(){
+        cartPage.removeProduct();
+    }
+    @Step
+    public void verifyProductWasRemoved() {
+        cartPage.hasBeenProductRemoved();
+    }
+    @Step
+    public void verifyProductStillInCart(String product){
+        cartPage.isStillProductInCart(product);
+    }
 
 
 
