@@ -17,7 +17,6 @@ public class SearchSteps extends BaseSteps{
     public void verifyProductIsInList(String productName){
         Assert.assertTrue(searchResultsPage.isProductInList(productName));
     }
-
     @Step
     public void goToSearchField(){
         shopPage.clickOnSearchField();
