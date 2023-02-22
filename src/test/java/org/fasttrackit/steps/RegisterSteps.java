@@ -1,6 +1,7 @@
 package org.fasttrackit.steps;
 
 import net.thucydides.core.annotations.Step;
+import org.junit.Assert;
 
 public class RegisterSteps extends BaseSteps{
 
@@ -21,6 +22,10 @@ public class RegisterSteps extends BaseSteps{
     @Step
     public void clickRegister() {
         accountPage.clickRegisterButton();
+    }
+    @Step
+    public void verifyRegisterWithSameAccount() {
+        Assert.assertEquals("Error:" , accountPage.getErrorText());
     }
 
 

@@ -12,6 +12,16 @@ public class RegisterTest extends BaseTest{
         registerSteps.typePassword(Constants.USER_PASS);
         registerSteps.clickRegister();
     }
+    @Test
+    public void registerWithExitingAccountTest(){
+        registerSteps.navigateToMyAccount();
+        registerSteps.typeUserEmail(Constants.USER_NAME);
+        registerSteps.typePassword(Constants.USER_PASS);
+        registerSteps.clickRegister();
+        registerSteps.clickRegister();
+        registerSteps.verifyRegisterWithSameAccount();
+
+    }
 
 
 

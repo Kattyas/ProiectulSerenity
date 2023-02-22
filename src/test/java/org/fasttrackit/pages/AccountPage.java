@@ -8,21 +8,18 @@ public class AccountPage extends BasePage{
 
     @FindBy(id = "reg_email")
     private WebElementFacade emailField;
-
     @FindBy(id = "reg_password")
     private WebElementFacade passwordField;
-
     @FindBy(css = ".register .woocommerce-Button")
     private WebElementFacade registerButton;
-
     @FindBy(id = "username")
     private WebElementFacade usernameField;
-
     @FindBy(id = "password")
     private WebElementFacade loginPasswordField;
-
     @FindBy(css = ".login button")
     private WebElementFacade loginButton;
+    @FindBy(css = ".woocommerce-error strong")
+    private WebElementFacade errorMessage;
 
 
 
@@ -40,17 +37,17 @@ public class AccountPage extends BasePage{
     public void clickRegisterButton() {
         clickOn(registerButton);
     }
-
     public void typeUsernameField(String value){
         typeInto(usernameField,value);
     }
-
     public void typePasswordField(String value){
         typeInto(loginPasswordField, value);
     }
-
     public void clickLoginButton() {
         clickOn(loginButton);
+    }
+    public String getErrorText(){
+        return errorMessage.getText();
     }
 
 
