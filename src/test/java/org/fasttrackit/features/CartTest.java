@@ -33,12 +33,21 @@ public class CartTest extends BaseTest{
         loginSteps.doLogin(Constants.USER_NAME, Constants.USER_PASS);
         checkoutSteps.navigateToCart();
         cartSteps.verifyProductStillInCart("Beanie");
-
-
-
-
-
-
+    }
+    @Test
+    public void checkCartAfterLogin(){
+        cartSteps.navigateToShopPage();
+        cartSteps.selectProduct();
+        cartSteps.clickAddToCart();
+        cartSteps.verifyProductWasAddedToCart();
+        cartSteps.navigateToShopPage();
+        cartSteps.selectProductCap();
+        cartSteps.clickAddToCart();
+        cartSteps.verifyProductWasAddedToCart();
+        loginSteps.doLogin(Constants.USER_NAME, Constants.USER_PASS);
+        checkoutSteps.navigateToCart();
+        cartSteps.verifyFirstProductStillInCart("Beanie");
+        cartSteps.verifySecondProductStillInCart("Cap");
     }
 
 

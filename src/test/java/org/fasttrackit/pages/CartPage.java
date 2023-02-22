@@ -14,6 +14,11 @@ public class CartPage extends BasePage{
     @FindBy(css = ".product-name a")
     private WebElementFacade checkProduct;
 
+    @FindBy(css = "tr:nth-child(1) td.product-name a")
+    private WebElementFacade productBenie;
+    @FindBy(css = "tr:nth-child(2) td.product-name a")
+    private WebElementFacade productCap;
+
 
 
 
@@ -32,6 +37,13 @@ public class CartPage extends BasePage{
     public void isStillProductInCart(String product){
         checkProduct.shouldContainText(product);
     }
+    public void isStillProductBeanieInCart(String product){
+        productBenie.shouldContainText(product);
+    }
+    public void isStillProductCapInCart(String product){
+        productCap.shouldContainText(product);
+    }
+
 
 
 

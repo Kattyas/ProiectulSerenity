@@ -17,7 +17,7 @@ public class CheckoutSteps extends BaseSteps{
     @Step
     public void placeOrder() {
         checkoutPage.clickPlaceOrder();
-        waitABit(3000);
+        waitABit(5000);
     }
     @Step
     public void verifyOrder(){

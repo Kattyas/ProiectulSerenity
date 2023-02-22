@@ -33,6 +33,19 @@ public class CartSteps extends BaseSteps{
     public void verifyProductStillInCart(String product){
         cartPage.isStillProductInCart(product);
     }
+    @Step
+    public void selectProductCap(){
+        shopPage.clickOnCap();
+    }
+    @Step
+    public void verifyFirstProductStillInCart(String product){
+        cartPage.isStillProductBeanieInCart(product);
+    }
+    @Step
+    public void verifySecondProductStillInCart(String product){
+        cartPage.isStillProductCapInCart(product);
+    }
+
 
 
 
