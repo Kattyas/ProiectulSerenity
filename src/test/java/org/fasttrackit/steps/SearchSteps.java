@@ -37,6 +37,10 @@ public class SearchSteps extends BaseSteps{
     public void productsAreSortedByAscendingPrice(){
         Assert.assertTrue("Not ascending price" ,shopPage.isPriceAscending());
     }
+    @Step
+    public void isNonExistentProductInShop(){
+        Assert.assertEquals("No products were found matching your selection." , searchResultsPage.getSearchMessage());
+    }
 
 
 

@@ -1,5 +1,6 @@
 package org.fasttrackit.features;
 
+import org.fasttrackit.utils.Constants;
 import org.junit.Test;
 
 public class SearchTest extends BaseTest {
@@ -18,6 +19,14 @@ public class SearchTest extends BaseTest {
         searchSteps.clickToSearch();
         searchSteps.sortProductsByPrice();
         searchSteps.productsAreSortedByAscendingPrice();
+    }
+    @Test
+    public void searchNonexistentProductTest(){
+        loginSteps.doLogin(Constants.USER_NAME, Constants.USER_PASS);
+        searchSteps.goToSearchField();
+        searchSteps.typeOnSearchField("qqqqq");
+        searchSteps.clickToSearch();
+        searchSteps.isNonExistentProductInShop();
     }
 
 

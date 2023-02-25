@@ -7,7 +7,6 @@ public class ProductPage extends BasePage{
 
     @FindBy(css = ".cart button")
     private WebElementFacade addToCartButton;
-
     @FindBy(id = "primary")
     private WebElementFacade addedToCartMessage;
     @FindBy(id = "menu-item-124")
@@ -19,17 +18,10 @@ public class ProductPage extends BasePage{
     public void clickAddToCartButton(){
         clickOn(addToCartButton);
     }
-//    public void hasBeenProductAddedToCart() {
-//        addedToCartMessage.shouldContainText("“Beanie” has been added to your cart.");
-//    }
+
     public void hasBeenProductAddedToCart() {
         addedToCartMessage.shouldContainText(" has been added to your cart.");
     }
-
-
-
-
-
 
     public void clickToCart(){
         clickOn(cartButton);

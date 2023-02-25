@@ -1,6 +1,7 @@
 package org.fasttrackit.steps;
 
 import net.thucydides.core.annotations.Step;
+import org.junit.Assert;
 
 public class AddNewAdressSteps extends BaseSteps{
 
@@ -63,6 +64,11 @@ public class AddNewAdressSteps extends BaseSteps{
     @Step
     public void clickSaveAddress(){
         billingAddressesPage.clickSaveAddressButton();
+    }
+
+    @Step
+    public void verifyIsAddedSuccesfully() {
+        Assert.assertEquals("Address changed successfully." , billingAddressesPage.getAddressText());
     }
 
 

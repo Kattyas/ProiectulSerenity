@@ -21,7 +21,7 @@ public class AddNewAdressTest extends BaseTest{
         addNewAdressSteps.typePhone("07400");
         addNewAdressSteps.typeEmailAddress(Constants.USER_NAME);
         addNewAdressSteps.clickSaveAddress();
-
+        addNewAdressSteps.verifyIsAddedSuccesfully();
     }
 
 

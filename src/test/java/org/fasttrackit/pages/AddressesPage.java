@@ -16,9 +16,6 @@ public class AddressesPage extends BasePage{
 
 
 
-
-
-
     public void clickBillingAddress(){
         clickOn(editBillingAddress);
     }

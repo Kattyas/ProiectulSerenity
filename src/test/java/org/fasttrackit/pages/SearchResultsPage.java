@@ -9,6 +9,8 @@ public class SearchResultsPage extends BasePage{
 
     @FindBy(css = ".container h1")
     private List<WebElementFacade> listOfProductNames;
+    @FindBy(css = "#primary p")
+    private WebElementFacade searchMessage;
 
 
 
@@ -27,6 +29,11 @@ public class SearchResultsPage extends BasePage{
         }
         return false;
     }
+
+    public String getSearchMessage(){
+        return searchMessage.getText();
+    }
+
 
 
 
