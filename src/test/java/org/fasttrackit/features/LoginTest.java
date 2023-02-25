@@ -14,6 +14,15 @@ public class LoginTest extends BaseTest{
         loginSteps.userIsLoggedIn("a");
     }
 
+    @Test
+    public void loginWithInvalidAccount(){
+        loginSteps.navigateToMyAccount();
+        loginSteps.typeUsername("AAAAA");
+        loginSteps.typePassword("AAAAA");
+        loginSteps.clickLogin();
+        loginSteps.checkErrorMessage();
+    }
+
 
 
 

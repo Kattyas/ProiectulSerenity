@@ -20,7 +20,6 @@ public class RegisterTest extends BaseTest{
         registerSteps.clickRegister();
         registerSteps.clickRegister();
         registerSteps.verifyRegisterWithSameAccount();
-
     }
 
 

@@ -7,17 +7,19 @@ import java.util.List;
 
 public class SearchResultsPage extends BasePage{
 
-    @FindBy(css = ".container h1")
-    private List<WebElementFacade> listOfProductNames;
+
     @FindBy(css = "#primary p")
     private WebElementFacade searchMessage;
+    @FindBy(css = ".container h1")
+    private List<WebElementFacade> listOfProductNames;
 
 
 
 
 
-
-
+    public String getSearchMessage(){
+        return searchMessage.getText();
+    }
     public boolean isProductInList(String productName){
         waitFor(listOfProductNames.get(0));
 
@@ -30,9 +32,7 @@ public class SearchResultsPage extends BasePage{
         return false;
     }
 
-    public String getSearchMessage(){
-        return searchMessage.getText();
-    }
+
 
 
 

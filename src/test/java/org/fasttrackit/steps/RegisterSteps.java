@@ -25,7 +25,8 @@ public class RegisterSteps extends BaseSteps{
     }
     @Step
     public void verifyRegisterWithSameAccount() {
-        Assert.assertEquals("Error:" , accountPage.getErrorText());
+        Assert.assertEquals("Error: An account is already registered with your email address. Please log in.",
+                accountPage.getErrorText());
     }
 
 

@@ -1,6 +1,7 @@
 package org.fasttrackit.steps;
 
 import net.thucydides.core.annotations.Step;
+import org.junit.Assert;
 
 public class LoginSteps extends BaseSteps{
 
@@ -32,6 +33,12 @@ public class LoginSteps extends BaseSteps{
         typePassword(password);
         clickLogin();
     }
+    @Step
+    public void checkErrorMessage(){
+        Assert.assertEquals("ERROR: Invalid username. Lost your password?" , accountPage.getErrorText());
+    }
+
+
 
 
 

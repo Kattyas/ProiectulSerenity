@@ -18,7 +18,7 @@ public class AccountPage extends BasePage{
     private WebElementFacade loginPasswordField;
     @FindBy(css = ".login button")
     private WebElementFacade loginButton;
-    @FindBy(css = ".woocommerce-error strong")
+    @FindBy(css = ".woocommerce-error li")
     private WebElementFacade errorMessage;
 
 

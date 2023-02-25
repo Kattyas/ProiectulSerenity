@@ -12,6 +12,14 @@ public class SearchTest extends BaseTest {
         searchSteps.verifyProductIsInList("NEW HAT");
     }
     @Test
+    public void searchNonexistentProductTest(){
+        loginSteps.doLogin(Constants.USER_NAME, Constants.USER_PASS);
+        searchSteps.goToSearchField();
+        searchSteps.typeOnSearchField("qqqqq");
+        searchSteps.clickToSearch();
+        searchSteps.isNonExistentProductInShop();
+    }
+    @Test
     public void verifyAscendingPriceTest(){
         cartSteps.navigateToShopPage();
         searchSteps.goToSearchField();
@@ -20,14 +28,7 @@ public class SearchTest extends BaseTest {
         searchSteps.sortProductsByPrice();
         searchSteps.productsAreSortedByAscendingPrice();
     }
-    @Test
-    public void searchNonexistentProductTest(){
-        loginSteps.doLogin(Constants.USER_NAME, Constants.USER_PASS);
-        searchSteps.goToSearchField();
-        searchSteps.typeOnSearchField("qqqqq");
-        searchSteps.clickToSearch();
-        searchSteps.isNonExistentProductInShop();
-    }
+
 
 
 
